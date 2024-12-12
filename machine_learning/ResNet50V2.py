@@ -9,14 +9,14 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 
 # Paths
-dataset_csv = r"C:\Users\WALTON\Desktop\final-thesis\dataset\csv\final_dataset.csv"
+dataset_csv = r"/home/repliq/Desktop/final-thesis/dataset/csv/final_dataset.csv"
 
 # Parameters
 batch_size = 32
 image_size = (224, 224)
 num_classes = 3
 learning_rate = 1e-4
-epochs = 50
+epochs = 30
 
 # Load CSV and split data
 df = pd.read_csv(dataset_csv)
