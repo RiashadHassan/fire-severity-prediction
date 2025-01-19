@@ -1,10 +1,14 @@
-# Paths
-input_folder = r"/home/repliq/Desktop/final-thesis/dataset/images/augment/Moderate"  # Folder with original moderate images
-output_folder = r"/home/repliq/Desktop/final-thesis/dataset/images/augment/adv-augmented-moderate"  # Folder to save augmented images
+import os, cv2
 import albumentations as A
-import cv2
-import os
-from tensorflow.keras.preprocessing.image import img_to_array, array_to_img, save_img
+from tensorflow.keras.preprocessing.image import (
+    img_to_array,
+    array_to_img,
+    save_img,
+)
+
+# Paths
+input_folder = r"C:\Users\WALTON\Downloads\Datasets\Images\archive (1)\Data\Train_Data\Moderate"  # Folder with original moderate images
+output_folder = r"C:\Users\WALTON\Downloads\Datasets\Images\haha"  # Folder to save augmented images
 
 # Define the augmentation pipeline (without Cutout)
 transform = A.Compose(
@@ -18,11 +22,8 @@ transform = A.Compose(
         ),  # Random color jitter
     ]
 )
-
-
 # Ensure output folder exists
 os.makedirs(output_folder, exist_ok=True)
-
 # Process images
 num_augmented_per_image = 3  # Number of new images to generate per original
 

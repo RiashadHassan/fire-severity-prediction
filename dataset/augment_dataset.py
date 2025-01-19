@@ -1,18 +1,10 @@
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-
-# Set up augmentation
-datagen = ImageDataGenerator(
-    rotation_range=20,
-    width_shift_range=0.2,
-    height_shift_range=0.2,
-    brightness_range=[0.8, 1.2],
-    zoom_range=0.2,
-    horizontal_flip=True,
-)
-
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import os
-from tensorflow.keras.preprocessing.image import load_img, img_to_array, save_img
+from tensorflow.keras.preprocessing.image import (
+    load_img,
+    img_to_array,
+    save_img,
+    ImageDataGenerator,
+)
 
 # Paths
 input_folder = r"C:\Users\WALTON\Downloads\Datasets\Images\archive (1)\Data\Train_Data\Moderate"  # Folder with original moderate images
